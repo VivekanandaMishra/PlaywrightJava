@@ -36,7 +36,7 @@ public class BaseTest {
 	public void setUp(Method method) {
 
 		playwright = Playwright.create();
-		browser = playwright.chromium().launch(new LaunchOptions().setHeadless(false).setSlowMo(100));
+		browser = playwright.chromium().launch(new LaunchOptions().setHeadless(true).setSlowMo(100));
 		context = browser.newContext();
 		page = context.newPage();
 		
